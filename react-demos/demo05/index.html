@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+    	//创建组件NotesList类名一定要大写开头
+      var NotesList = React.createClass({
+        render: function() {
+          return (
+            <ol>
+              {
+                React.Children.map(this.props.children, function (child) {
+                	//获取元素的子元素
+                	console.log(child);
+                  return <li>{child}</li>;
+                })
+              }
+            </ol>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <NotesList>
+          <span>hello</span>
+          <span>world</span>
+        </NotesList>,
+        //插入组件到id为'example'的div标签下
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
+

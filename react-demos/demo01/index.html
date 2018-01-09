@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>   <!-- react的核心库-->
+    <script src="../build/react-dom.js"></script>   <!--提供与DOM相关的功能-->
+    <script src="../build/browser.min.js"></script>  <!--将JSX语法转换成JavaScript语法-->
+  </head>
+  <body>
+    <div id="example"></div>
+    
+    <script type="text/babel">
+//  	ReactDom.render():是React的基本方法,用于将模板转换为HTML语言,并插入到指定的DOM节点
+    	ReactDOM.render(
+    		<h1>hello world !</h1>,
+    		document.getElementById('example')
+    	);
+    </script>
+    
+  </body>
+</html>

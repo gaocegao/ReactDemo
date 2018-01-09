@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8" />
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <!--<script type="text/babel">
+      var HelloMessage = React.createClass({
+        render: function() {
+          return <h1>Hello {this.props.name}</h1>;
+        }
+      });
+
+      ReactDOM.render(
+        <HelloMessage name="John" />,
+        document.getElementById('example')
+      );
+    </script>-->
+    <!--React允许将js代码封装成组件，像插入普通HTML标签一样插入这个组件，React.createClass方法用于生成组件。-->
+  <script type="text/babel">
+//	 组件类首字母必须大写例 Hello
+    	 var Hello = React.createClass({
+        render: function() {
+          return <h1>Hello {this.props.name}</h1>;
+        }
+      });
+    	
+    	   ReactDOM.render(
+        <Hello name="旺财" />,
+        document.getElementById('example')
+      );
+    </script>
+    
+  </body>
+</html>
+
+
